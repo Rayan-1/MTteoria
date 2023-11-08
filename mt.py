@@ -1,24 +1,24 @@
 def entrada(input_string):
-    tape = list(input_string)
-    tape.append(' ')
-
+    fita = list(input_string)
+    fita.append(' ')
+    #estado inicial
     state = 'q0'
+    #cabeça
     head = 0
 
     while True:
-        symbol = tape[head]
-
+        symbol = fita[head]
         if state == 'q0':
             if symbol == '0':
-                tape[head] = 'X'
+                fita[head] = 'X'
                 head += 1
                 state = 'q0'
             elif symbol == '1':
-                tape[head] = 'X'
+                fita[head] = 'X'
                 head += 1
                 state = 'q0'
             elif symbol == '#':
-                tape[head] = '#'
+                fita[head] = '#'
                 head += 1
                 state = 'q1'
             else:
@@ -26,15 +26,15 @@ def entrada(input_string):
 
         elif state == 'q1':
             if symbol == '0':
-                tape[head] = '0'
+                fita[head] = '0'
                 head += 1
                 state = 'q1'
             elif symbol == '1':
-                tape[head] = '1'
+                fita[head] = '1'
                 head += 1
                 state = 'q1'
             elif symbol == 'X':
-                tape[head] = 'X'
+                fita[head] = 'X'
                 head += 1
                 state = 'q1'
             elif symbol == ' ':
