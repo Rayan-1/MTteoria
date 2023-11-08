@@ -22,9 +22,9 @@ class MaquinaTuring:
                 break
             proximo_estado, simbolo_escrito, direcao_movimento = self.transicoes[(self.estado_atual, simbolo_atual)]
             self.fitat[self.cabeca] = simbolo_escrito
-            if direcao_movimento == 'E':
+            if direcao_movimento == 'L':
                 self.cabeca -= 1
-            elif direcao_movimento == 'D':
+            elif direcao_movimento == 'R':
                 self.cabeca += 1
             self.estado_atual = proximo_estado
 
