@@ -1,4 +1,4 @@
-def is_valid_string(input_string):
+def entrada(input_string):
     tape = list(input_string)
     tape.append(' ')
 
@@ -50,7 +50,7 @@ def is_valid_string(input_string):
 
 # Função que verifica se uma string está na linguagem
 def verifica_linguagem(input_string):
-    if is_valid_string(input_string):
+    if entrada(input_string):
         return "A entrada está na linguagem."
     else:
         return "A entrada não está na linguagem."
